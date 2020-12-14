@@ -1,0 +1,4 @@
+<div *ngIf="imageSrc" class="container {{imageContainerClass}}">
+  <canvas #imageCanvas [width]="width" [height]="height" class="canvas"></canvas>
+  <img [src]="imageSrc" [width]="width" [height]="height" class="image" (load)="onImageLoad()">
+</div>

@@ -1,0 +1,59 @@
+<div class="main">
+  <div class="container-fluid">
+    <!-- Rechtecke -->
+    <div class="row">
+      <div class="col-sm-4">
+        <b>Rechtecke (lowerLeft, upperRight)</b>
+      </div>
+      <div class="col-sm-4">
+        <b>Rechtecke ([StartX, StartY], Rechteck-Breite, Rechteck-Höhe)</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <ol>
+          <li *ngFor="let rect of rectangles">{{rect.lowerLeft}}, {{rect.upperRight}}</li>
+        </ol>
+      </div>
+      <div class="col-sm-4">
+        <ol>
+          <li *ngFor="let rect of rectangles">{{getConvertedRect(rect)}}</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Image-Draw -->
+    <div class="row">
+      <div class="col-sm-12">
+        <b>Image-Draw</b>
+      </div>
+    </div>
+    <div class="row" style="min-height: 500px;">
+      <app-image-viewer imageContainerClass="col-sm-12" [imageSrc]="imageSource" [width]="imageWidth"
+        [height]="imageHeight" [rectangles]="rectangles"></app-image-viewer>
+    </div>
+
+    <!-- PDF-Draw (embed-tag) -->
+    <div class="row">
+      <div class="col-sm-12">
+        <b>PDF-Draw (embeded-Tag)</b>
+      </div>
+    </div>
+    <div class="row" style="min-height: 500px;">
+      <app-pdf-viewer imageContainerClass="col-sm-12" [pdfSrc]="pdfSource" [width]="imageWidth" [height]="imageHeight"
+        [rectangles]="rectangles"></app-pdf-viewer>
+    </div>
+
+    <!-- PDF-Draw (PDFjs) -->
+    <div class="row">
+      <div class="col-sm-12">
+        <b>PDF-Draw (PDF.js)</b>
+      </div>
+    </div>
+    <div class="row" style="min-height: 500px;">
+      <app-pdf-js-viewer imageContainerClass="col-sm-12" [pdfSrc]="pdfSource" [width]="imageWidth"
+        [rectangles]="rectangles"></app-pdf-js-viewer>
+    </div>
+
+  </div>
+</div>

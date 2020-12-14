@@ -1,0 +1,4 @@
+<div *ngIf="pdfSrc" class="container {{imageContainerClass}}">
+  <embed #embed [width]="width" [height]="height" type="application/pdf" class="pdf" (load)="onPdfLoad()">
+  <canvas #pdfCanvas [width]="width" [height]="height" class="canvas"></canvas>
+</div>

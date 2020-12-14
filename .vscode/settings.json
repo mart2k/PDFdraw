@@ -1,0 +1,43 @@
+{
+    // Steuert die automatische Speicherung geänderter Dateien. Zulässige Werte: "off", "afterDelay", "onFocusChange" (Editor verliert den Fokus), "onWindowChange" (Fenster verliert den Fokus). Wenn diese Angabe auf "afterDelay" festgelegt ist, können Sie die Verzögerung in "files.autoSaveDelay" konfigurieren.
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 30000,
+    "typescript.format.enable": true,
+  
+    // Hiermit wird eine Datei beim Speichern formatiert. Es muss ein Formatierer vorhanden sein, die Datei darf nicht automatisch gespeichert werden, und der Editor darf nicht geschlossen werden.
+    "[typescript]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+  
+    "[css]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true
+    },
+    "[scss]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true
+    },
+    "[html]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true
+    },
+    "[json]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true
+    },
+  
+    // Linting im Editor: ausgenommene Pfade
+    "tslint.exclude": "**/rest-api/**",
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "terminal.integrated.scrollback": 50000,
+    "vsicons.presets.angular": true,
+    "htmlhint.options": {
+      "attr-lowercase": false
+    },
+    "typescript.tsdk": "node_modules/typescript/lib" // https://github.com/angular/vscode-ng-language-service/issues/824#issuecomment-650582347
+  }
+  
