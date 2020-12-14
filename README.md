@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Stackblitz
 
-stackblitz.com/github/mart2k/PDFDraw
+https://stackblitz.com/github/mart2k/PDFdraw
 
 ## Development server
 
